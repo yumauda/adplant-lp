@@ -1,0 +1,57 @@
+@use "../global" as *;
+
+.p-guess {
+  padding-top: rem(48);
+  padding-bottom: rem(48);
+  background: #fdfaf0;
+}
+
+.p-guess__content {
+  display: flex;
+  gap: rem(100);
+  align-items: center;
+}
+
+.p-guess__left {
+}
+
+.p-guess__left-titleWrapper {
+  text-align: center;
+}
+
+.p-guess__left-title {
+  font-size: rem(23);
+  text-align: center;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  color: #262626;
+}
+
+.p-guess__lists {
+  margin-top: rem(40);
+}
+
+.p-guess__list {
+}
+
+.p-guess__link {
+  font-size: rem(20);
+  font-weight: 500;
+  line-height: calc(52 / 20);
+  color: #262626;
+  letter-spacing: 0.03em;
+}
+.p-guess__link span {
+  color: #FC7935;
+}
+.p-guess__img {
+  max-width: rem(369);
+  width: 100%;
+  margin-top: rem(64);
+}
+.p-guess__img img{
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  object-position: center center;
+}

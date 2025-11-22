@@ -1,0 +1,18 @@
+@use "../global" as *;
+
+.c-block-title {
+  color: #fff;
+  font-size: rem(19);
+  letter-spacing: 0.02em;
+  font-weight: 600;
+  line-height: calc(35 / 19);
+  padding-top: rem(4);
+  white-space: nowrap;
+  padding-bottom: rem(4);
+  padding-left: rem(23);
+  padding-right: rem(12);
+  display: flex;
+  align-items: center;
+  width: rem(390);
+  background: #fc7935;
+}

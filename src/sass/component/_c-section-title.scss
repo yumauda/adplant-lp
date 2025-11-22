@@ -1,0 +1,12 @@
+@use "../global" as *;
+
+.c-section-title {
+  color: #262626;
+  font-size: rem(35);
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  line-height: 1.6;
+}
+.c-section-title span {
+  font-size: rem(45);
+}

@@ -1,0 +1,40 @@
+@use "../global" as *;
+
+.p-site {
+  padding-top: rem(64);
+  padding-bottom: rem(56);
+}
+
+.p-site__content {
+}
+
+.p-site__title-wrapper {
+  text-align: center;
+}
+
+.p-site__title {
+}
+.p-site__subText-wrapper {
+  margin-top: rem(32);
+  text-align: center;
+}
+
+.p-site__subText {
+  font-size: rem(24);
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  line-height: calc(35 / 24);
+  color: #ff6e22;
+}
+
+.p-site__text-wrapper {
+  margin-top: rem(40);
+}
+
+.p-site__text {
+  font-size: rem(16);
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  line-height: calc(35 / 16);
+  color: #262626;
+}

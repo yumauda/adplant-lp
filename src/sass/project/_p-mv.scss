@@ -1,0 +1,14 @@
+@use "../global" as *;
+
+.p-mv {
+  padding-top: rem(98);
+}
+
+.p-mv__img {
+}
+.p-mv__img img {
+  aspect-ratio: 1400 / 634;
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+}
