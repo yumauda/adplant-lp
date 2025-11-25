@@ -36,7 +36,7 @@
 .p-flow__img {
   filter: drop-shadow(0 6px 6px rgba(0, 0, 0, 0.3));
 }
-.p-flow__img img{
+.p-flow__img img {
   width: 100%;
   height: auto;
   object-fit: cover;
@@ -51,13 +51,12 @@
   margin-top: rem(48);
 }
 
-
 .p-flow__block-text {
   margin-top: rem(24);
 }
 
 .bg-orange {
-  background: #FDFAF0;
+  background: #fdfaf0;
 }
 
 .p-flow__position-img {
@@ -67,14 +66,14 @@
   margin-right: auto;
   margin-left: auto;
 }
-.p-flow__position-img img{
+.p-flow__position-img img {
   width: 100%;
   height: auto;
   object-fit: cover;
   object-position: center center;
 }
 .p-flow__target {
-  background: #FDFAF0;
+  background: #fdfaf0;
   padding: rem(40);
   margin-top: rem(40);
 }
@@ -84,9 +83,84 @@
   letter-spacing: 0.05em;
   color: #262626;
 }
+.mt14 {
+  margin-top: rem(14);
+}
 .mt28 {
   margin-top: rem(28);
 }
 .p-flow__bottom-text {
   margin-top: rem(48);
+}
+.p-flow__row {
+  display: flex;
+  gap: rem(55);
+  margin-top: rem(40);
+}
+.p-flow__point-img {
+  max-width: rem(350);
+  width: 100%;
+  margin-left: auto;
+}
+.p-flow__point-img img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  object-position: center center;
+}
+.p-flow__block-boldTitle {
+  margin-top: rem(56);
+  font-size: rem(21);
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  color: #262626;
+}
+
+.p-flow__block-lists {
+  margin-top: rem(32);
+}
+
+.p-flow__block-list {
+  font-size: rem(16);
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  line-height: calc(35 / 16);
+  color: #262626;
+}
+.p-flow__block-list + .p-flow__block-list {
+  margin-top: rem(24);
+}
+.p-flow__block-numberLists {
+  max-width: rem(640);
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: rem(48);
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  gap: rem(100);
+}
+
+.p-flow__block-numberList {
+}
+
+.p-flow__block-numberImg {
+}
+.p-flow__block-numberImg img{
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  object-position: center center;
+}
+
+.p-flow__block-numberText {
+  font-size: rem(17);
+  color: #262626;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  margin-top: rem(12);
+  text-align: center;
+}
+.mt60 {
+  margin-top: rem(60);
 }

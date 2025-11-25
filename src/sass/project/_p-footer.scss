@@ -1,0 +1,17 @@
+@use "../global" as *;
+
+.p-footer {
+  background: #000;
+  padding-top: rem(13);
+  padding-bottom: rem(13);
+}
+
+.p-footer__content {
+  text-align: center;
+}
+
+.p-footer__small {
+  color: #fff;
+  font-size: rem(12);
+
+}
