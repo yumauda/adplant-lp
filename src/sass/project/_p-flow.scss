@@ -127,8 +127,14 @@
   line-height: calc(35 / 16);
   color: #262626;
 }
+.p-flow__block-list span {
+  font-size: rem(10);
+}
 .p-flow__block-list + .p-flow__block-list {
   margin-top: rem(24);
+}
+.lh24 + .lh24 {
+  margin-top: initial;
 }
 .p-flow__block-numberLists {
   max-width: rem(640);
@@ -146,7 +152,7 @@
 
 .p-flow__block-numberImg {
 }
-.p-flow__block-numberImg img{
+.p-flow__block-numberImg img {
   width: 100%;
   height: auto;
   object-fit: cover;
@@ -163,4 +169,37 @@
 }
 .mt60 {
   margin-top: rem(60);
+}
+.mt44 {
+  margin-top: rem(44);
+}
+.mt12 {
+  margin-top: rem(12);
+}
+.mt24 {
+  margin-top: rem(24);
+}
+.lh24 {
+  line-height: calc(35 / 16);
+}
+.pl20 {
+  padding-left: rem(20);
+}
+.p-flow__box-title {
+  color: #fff;
+  font-size: rem(21);
+  letter-spacing: 0.05em;
+  font-weight: 600;
+  padding: rem(4) rem(16);
+  background: #262626;
+  display: inline-block;
+}
+.p-flow__map {
+  margin-top: rem(64);
+}
+.p-flow__map img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  object-position: center center;
 }
