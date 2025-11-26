@@ -47,4 +47,13 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
     return false;
   });
 
+  // videoクリックで再生/一時停止
+  $('video').on('click', function() {
+    if (this.paused) {
+      this.play();
+    } else {
+      this.pause();
+    }
+  });
+
 });
