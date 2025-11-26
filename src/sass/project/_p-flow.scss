@@ -203,3 +203,43 @@
   object-fit: cover;
   object-position: center center;
 }
+.p-flow__btn-wrapper {
+  margin-top: rem(93);
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ flex-direction: column;
+ gap: rem(72);
+}
+
+.p-flow__btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: rem(10);
+  background: #262626;
+  border-radius: 9999px;
+  width: rem(320);
+  height: rem(50);
+  position: relative;
+}
+.p-flow__btn-text {
+  font-size: rem(13);
+  letter-spacing: 0.02em;
+  color: #fff;
+  font-weight: 500;
+}
+
+.p-flow__svg {
+  width: rem(7);
+  position: absolute;
+  top: 50%;
+  right: rem(20);
+  transform: translateY(-50%);
+}
+.p-flow__svg svg{
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  object-position: center center;
+}
