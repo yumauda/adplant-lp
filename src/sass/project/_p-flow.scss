@@ -1,17 +1,29 @@
 @use "../global" as *;
 
 .p-flow {
-  padding-top: rem(64);
-  padding-bottom: rem(64);
+  padding-top: rem(40);
+  padding-bottom: rem(40);
+  @include mq(md) {
+    padding-top: rem(64);
+    padding-bottom: rem(64);
+  }
 }
 
 .p-flow__content {
 }
 
 .p-flow__top-text {
-  margin-top: rem(40);
+  margin-top: rem(28);
+  @include mq(md) {
+    margin-top: rem(40);
+  }
 }
-
+.p-flow__text-wrapper {
+  margin-top: rem(16);
+  @include mq(md) {
+    margin-top: initial;
+  }
+}
 .p-flow__text {
   font-size: rem(16);
   font-weight: 400;
@@ -23,7 +35,7 @@
   display: grid;
   gap: rem(17);
   grid-template-columns: repeat(3, 1fr);
-  margin-top: rem(40);
+  margin-top: rem(32);
   @include mq(md) {
     margin-top: rem(72);
     grid-template-columns: repeat(6, 1fr);
@@ -44,7 +56,10 @@
 }
 
 .p-flow__block-wrapper {
-  margin-top: rem(90);
+  margin-top: rem(29);
+  @include mq(md) {
+    margin-top: rem(90);
+  }
 }
 
 .p-flow__block + .p-flow__block {
@@ -52,7 +67,10 @@
 }
 
 .p-flow__block-text {
-  margin-top: rem(24);
+  margin-top: rem(16);
+  @include mq(md) {
+    margin-top: rem(24);
+  }
 }
 
 .bg-orange {
@@ -74,33 +92,55 @@
 }
 .p-flow__target {
   background: #fdfaf0;
-  padding: rem(40);
-  margin-top: rem(40);
+  margin-top: rem(24);
+  padding: rem(16);
+  @include mq(md) {
+    padding: rem(40);
+    margin-top: rem(40);
+  }
 }
 .p-flow__target-title {
-  font-size: rem(23);
   font-weight: 600;
   letter-spacing: 0.05em;
   color: #262626;
+  font-size: rem(20);
+  @include mq(md) {
+    font-size: rem(23);
+  }
 }
 .mt14 {
-  margin-top: rem(14);
+  margin-top: rem(24);
+  @include mq(md) {
+    margin-top: rem(14);
+  }
 }
 .mt28 {
   margin-top: rem(28);
 }
 .p-flow__bottom-text {
-  margin-top: rem(48);
+  margin-top: rem(24);
+  @include mq(md) {
+    margin-top: rem(48);
+  }
 }
 .p-flow__row {
-  display: flex;
-  gap: rem(55);
-  margin-top: rem(40);
+  @include mq(md) {
+    display: flex;
+    gap: rem(55);
+    margin-top: rem(40);
+  }
 }
 .p-flow__point-img {
-  max-width: rem(350);
+  max-width: rem(270);
   width: 100%;
   margin-left: auto;
+  margin-right: auto;
+  margin-top: rem(24);
+  @include mq(md) {
+    margin-top: initial;
+    max-width: rem(350);
+    margin-right: initial;
+  }
 }
 .p-flow__point-img img {
   width: 100%;
@@ -117,7 +157,10 @@
 }
 
 .p-flow__block-lists {
-  margin-top: rem(32);
+  margin-top: rem(20);
+  @include mq(md) {
+    margin-top: rem(32);
+  }
 }
 
 .p-flow__block-list {
@@ -137,14 +180,18 @@
   margin-top: initial;
 }
 .p-flow__block-numberLists {
-  max-width: rem(640);
   width: 100%;
   margin-left: auto;
   margin-right: auto;
-  margin-top: rem(48);
   display: grid;
   grid-template-columns: repeat(3, auto);
-  gap: rem(100);
+  margin-top: rem(24);
+  gap: rem(24);
+  @include mq(md) {
+    max-width: rem(640);
+    margin-top: rem(48);
+    gap: rem(100);
+  }
 }
 
 .p-flow__block-numberList {
@@ -160,18 +207,27 @@
 }
 
 .p-flow__block-numberText {
-  font-size: rem(17);
   color: #262626;
   font-weight: 500;
   letter-spacing: 0.05em;
   margin-top: rem(12);
   text-align: center;
+  font-size: rem(14);
+  @include mq(md) {
+    font-size: rem(17);
+  }
 }
 .mt60 {
-  margin-top: rem(60);
+  margin-top: rem(24);
+  @include mq(md) {
+    margin-top: rem(60);
+  }
 }
 .mt44 {
-  margin-top: rem(44);
+  margin-top: rem(24);
+  @include mq(md) {
+    margin-top: rem(44);
+  }
 }
 .mt12 {
   margin-top: rem(12);
@@ -187,15 +243,21 @@
 }
 .p-flow__box-title {
   color: #fff;
-  font-size: rem(21);
   letter-spacing: 0.05em;
   font-weight: 600;
   padding: rem(4) rem(16);
   background: #262626;
   display: inline-block;
+  font-size: rem(18);
+  @include mq(md) {
+    font-size: rem(21);
+  }
 }
 .p-flow__map {
-  margin-top: rem(64);
+  margin-top: rem(32);
+  @include mq(md) {
+    margin-top: rem(64);
+  }
 }
 .p-flow__map img {
   width: 100%;
@@ -204,12 +266,16 @@
   object-position: center center;
 }
 .p-flow__btn-wrapper {
-  margin-top: rem(93);
- display: flex;
- align-items: center;
- justify-content: center;
- flex-direction: column;
- gap: rem(72);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: rem(40);
+  gap: rem(24);
+  @include mq(md) {
+    gap: rem(72);
+    margin-top: rem(93);
+  }
 }
 
 .p-flow__btn {
@@ -219,9 +285,12 @@
   gap: rem(10);
   background: #262626;
   border-radius: 9999px;
-  width: rem(320);
   height: rem(50);
   position: relative;
+  width: rem(260);
+  @include mq(md) {
+    width: rem(320);
+  }
 }
 .p-flow__btn-text {
   font-size: rem(13);
@@ -234,10 +303,13 @@
   width: rem(7);
   position: absolute;
   top: 50%;
-  right: rem(20);
   transform: translateY(-50%);
+  right: rem(12);
+  @include mq(md) {
+    right: rem(20);
+  }
 }
-.p-flow__svg svg{
+.p-flow__svg svg {
   width: 100%;
   height: auto;
   object-fit: cover;

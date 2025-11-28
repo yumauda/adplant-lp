@@ -1,8 +1,12 @@
 @use "../global" as *;
 
 .p-site {
-  padding-top: rem(64);
-  padding-bottom: rem(56);
+  padding-top: rem(40);
+  padding-bottom: rem(40);
+  @include mq(md) {
+    padding-top: rem(64);
+    padding-bottom: rem(56);
+  }
 }
 
 .p-site__content {
@@ -13,6 +17,14 @@
 }
 
 .p-site__title {
+  color: #262626;
+  letter-spacing: 0.05em;
+  line-height: calc(48 / 29);
+  font-weight: 700;
+  font-size: rem(18);
+  @include mq(md) {
+    font-size: rem(29);
+  }
 }
 .p-site__subText-wrapper {
   margin-top: rem(32);
@@ -20,15 +32,21 @@
 }
 
 .p-site__subText {
-  font-size: rem(24);
+  font-size: rem(18);
   font-weight: 700;
   letter-spacing: 0.05em;
   line-height: calc(35 / 24);
   color: #ff6e22;
+  @include mq(md) {
+    font-size: rem(24);
+  }
 }
 
 .p-site__text-wrapper {
-  margin-top: rem(40);
+  margin-top: rem(24);
+  @include mq(md){
+    margin-top: rem(40);
+  }
 }
 
 .p-site__text {

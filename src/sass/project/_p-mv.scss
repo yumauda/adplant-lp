@@ -7,8 +7,11 @@
 .p-mv__img {
 }
 .p-mv__img img {
-  aspect-ratio: 1400 / 634;
   object-fit: cover;
   width: 100%;
   height: auto;
+  aspect-ratio: 750 / 750;
+  @include mq(md) {
+    aspect-ratio: 1400 / 634;
+  }
 }

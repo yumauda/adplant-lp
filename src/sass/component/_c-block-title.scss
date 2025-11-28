@@ -2,20 +2,28 @@
 
 .c-block-title {
   color: #fff;
-  font-size: rem(19);
   letter-spacing: 0.02em;
   font-weight: 600;
   line-height: calc(35 / 19);
   padding-top: rem(4);
   white-space: nowrap;
   padding-bottom: rem(4);
-  padding-left: rem(23);
   padding-right: rem(12);
   display: flex;
   align-items: center;
-  width: rem(390);
   background: #fc7935;
+  width: 100%;
+  font-size: rem(16);
+  padding-left: rem(12);
+  @include mq(md) {
+    padding-left: rem(23);
+    font-size: rem(19);
+    width: rem(390);
+  }
 }
 .w500 {
-  width: rem(500);
+  width: 100%;
+  @include mq(md) {
+    width: rem(500);
+  }
 }
