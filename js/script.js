@@ -4,15 +4,33 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
   var topBtn = $('.pagetop');
   topBtn.hide();
 
-  // ボタンの表示設定
+  // ヘッダーのスクロール時の表示/非表示
+  var header = $('.p-header');
+  var headerHeight = header.outerHeight();
+  var startPos = 0;
+
   $(window).scroll(function () {
-    if ($(this).scrollTop() > 70) {
+    var currentPos = $(this).scrollTop();
+
+    // ページトップボタンの表示設定
+    if (currentPos > 70) {
       // 指定px以上のスクロールでボタンを表示
       topBtn.fadeIn();
     } else {
       // 画面が指定pxより上ならボタンを非表示
       topBtn.fadeOut();
     }
+
+    // ヘッダーの表示/非表示
+    if (currentPos > startPos && currentPos > headerHeight) {
+      // 下スクロール時：ヘッダーを非表示
+      header.addClass('is-hidden');
+    } else {
+      // 上スクロール時：ヘッダーを表示
+      header.removeClass('is-hidden');
+    }
+
+    startPos = currentPos;
   });
 
   // ボタンをクリックしたらスクロールして上に戻る

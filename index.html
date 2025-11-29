@@ -19,6 +19,9 @@
   <link rel="icon" href="./images/common/favicon.ico" />
   <link rel="apple-touch-icon" sizes="180x180" href="./images/common/apple-touch-icon.webp">
   <!-- CSS (sassコマンドで自動生成) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./css/styles.css">
   <!-- JavaScript -->
   <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
@@ -31,23 +34,170 @@
 
 <body>
   <header class="l-header p-header">
-    <!-- <div class="p-header__inner">
+    <div class="p-header__inner">
       <div class="p-header__content">
         <h1 class="p-header__logo">
-          <a href="#" class="p-header__home">
-            <img src="./images/common/header_logo.webp" alt="エーディープラント株式会社" width="431" height="38">
+          <a href="#" class="p-header__logo-link">
+            <div class="p-header__home">
+              <img src="./images/common/header_logo.webp" alt="エーディープラント株式会社" width="431" height="38">
+            </div>
+            <p class="p-header__home-text">エーディープラント株式会社</p>
           </a>
         </h1>
         <nav class="p-header__nav">
           <ul class="p-header__lists">
             <li class="p-header__list">
-              <a href="" class="p-header__link">Top</a>
+              <a href="" class="p-header__link p-header__link--flip">
+                <span class="p-header__link-text">
+                  <span class="p-header__link-en">Top</span>
+                  <span class="p-header__link-ja">トップ</span>
+                </span>
+              </a>
+            </li>
+            <li class="p-header__list">
+              <a href="" class="p-header__link p-header__link--mega">
+                <span class="p-header__link-text">
+                  <span class="p-header__link-en">Works</span>
+                  <span class="p-header__link-ja">works</span>
+                </span>
+              </a>
+              <ul class="p-header__mega-lists">
+                <li class="p-header__mega-list">
+                  <a href="" class="p-header__mega-link">WEBサイト</a>
+                </li>
+                <li class="p-header__mega-list">
+                  <a href="" class="p-header__mega-link">会社案内</a>
+                </li>
+                <li class="p-header__mega-list">
+                  <a href="" class="p-header__mega-link">カタログ・パンフレット</a>
+                </li>
+                <li class="p-header__mega-list">
+                  <a href="" class="p-header__mega-link">社内報・PR紙</a>
+                </li>
+                <li class="p-header__mega-list">
+                  <a href="" class="p-header__mega-link">写真・動画撮影・編集</a>
+                </li>
+                <li class="p-header__mega-list">
+                  <a href="" class="p-header__mega-link">マーケティング・コンサルティング</a>
+                </li>
+              </ul>
+            </li>
+            <li class="p-header__list">
+              <a href="" class="p-header__link p-header__link--flip">
+                <span class="p-header__link-text">
+                  <span class="p-header__link-en">Message</span>
+                  <span class="p-header__link-ja">メッセージ</span>
+                </span>
+              </a>
+            </li>
+            <li class="p-header__list">
+              <a href="" class="p-header__link p-header__link--flip">
+                <span class="p-header__link-text">
+                  <span class="p-header__link-en">Staff</span>
+                  <span class="p-header__link-ja">スタッフ</span>
+                </span>
+              </a>
+            </li>
+            <li class="p-header__list">
+              <a href="" class="p-header__link p-header__link--flip">
+                <span class="p-header__link-text">
+                  <span class="p-header__link-en">FAQ</span>
+                  <span class="p-header__link-ja">よくある質問</span>
+                </span>
+              </a>
+            </li>
+            <li class="p-header__list">
+              <a href="" class="p-header__link p-header__link--flip">
+                <span class="p-header__link-text">
+                  <span class="p-header__link-en">Company</span>
+                  <span class="p-header__link-ja">会社概要</span>
+                </span>
+              </a>
+            </li>
+            <li class="p-header__list">
+              <a href="" class="p-header__link p-header__link--flip">
+                <span class="p-header__link-text">
+                  <span class="p-header__link-en">Contact</span>
+                  <span class="p-header__link-ja">お問い合わせ</span>
+                </span>
+              </a>
             </li>
           </ul>
         </nav>
+        <div class="p-header__btn-wrapper">
+          <a href="#" class="p-header__btn">お問い合わせはお気軽に</a>
+        </div>
+        <!-- ハンバーガーメニューボタン -->
+        <button class="p-header__hamburger js-drawer-open" id="MenuButton" aria-label="メニューを開く">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
       </div>
-    </div> -->
+    </div>
   </header>
+
+  <!-- ドロワーメニュー -->
+  <div class="drawer-menu">
+    <nav class="drawer-menu__nav">
+      <ul class="drawer-menu__lists">
+        <li class="drawer-menu__list">
+          <a href="" class="drawer-menu__link drawer-menu__link--flip">
+            <span class="drawer-menu__link-text">
+              <span class="drawer-menu__link-en">Top</span>
+              <span class="drawer-menu__link-ja">トップ</span>
+            </span>
+          </a>
+        </li>
+        <li class="drawer-menu__list">
+          <a href="" class="drawer-menu__link">Works</a>
+        </li>
+        <li class="drawer-menu__list">
+          <a href="" class="drawer-menu__link drawer-menu__link--flip">
+            <span class="drawer-menu__link-text">
+              <span class="drawer-menu__link-en">Message</span>
+              <span class="drawer-menu__link-ja">メッセージ</span>
+            </span>
+          </a>
+        </li>
+        <li class="drawer-menu__list">
+          <a href="" class="drawer-menu__link drawer-menu__link--flip">
+            <span class="drawer-menu__link-text">
+              <span class="drawer-menu__link-en">Staff</span>
+              <span class="drawer-menu__link-ja">スタッフ</span>
+            </span>
+          </a>
+        </li>
+        <li class="drawer-menu__list">
+          <a href="" class="drawer-menu__link drawer-menu__link--flip">
+            <span class="drawer-menu__link-text">
+              <span class="drawer-menu__link-en">FAQ</span>
+              <span class="drawer-menu__link-ja">よくある質問</span>
+            </span>
+          </a>
+        </li>
+        <li class="drawer-menu__list">
+          <a href="" class="drawer-menu__link drawer-menu__link--flip">
+            <span class="drawer-menu__link-text">
+              <span class="drawer-menu__link-en">Company</span>
+              <span class="drawer-menu__link-ja">会社概要</span>
+            </span>
+          </a>
+        </li>
+        <li class="drawer-menu__list">
+          <a href="" class="drawer-menu__link drawer-menu__link--flip">
+            <span class="drawer-menu__link-text">
+              <span class="drawer-menu__link-en">Contact</span>
+              <span class="drawer-menu__link-ja">お問い合わせ</span>
+            </span>
+          </a>
+        </li>
+      </ul>
+      <div class="drawer-menu__btn-wrapper">
+        <a href="#" class="drawer-menu__btn">お問い合わせはお気軽に</a>
+      </div>
+    </nav>
+  </div>
   
   <main>
     <section class="l-mv p-mv">
