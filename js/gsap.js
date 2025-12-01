@@ -2,10 +2,22 @@
 
 // アニメーションパターンを定義
 const animationPatterns = {
+  // ページ全体をふわっと表示（ページ読み込み時に即座に実行）
+  "js-page-fade": {
+    from: { opacity: 0 },
+    to: { duration: 1, opacity: 1, ease: "power2.out" },
+    useScrollTrigger: false,
+  },
   // ページ読み込み時に即座に表示（ScrollTrigger無し）
   "js-top": {
     from: { opacity: 0, y: 50 },
     to: { duration: 1.5, opacity: 1, y: 0, stagger: 0.8, ease: "power3.out" },
+    useScrollTrigger: false,
+  },
+  // メインビジュアル - 拡大から元のサイズへ（ページ読み込み時に即座に実行）
+  "p-mv": {
+    from: { scale: 1.2 },
+    to: { duration: 2, scale: 1, ease: "power2.out" },
     useScrollTrigger: false,
   },
   // フェードイン（下から上へ）

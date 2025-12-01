@@ -23,6 +23,7 @@ $second-font-family: "Jost", sans-serif;
 
 body {
   font-family: $base-font-family;
+  overflow-x: clip;
 }
 
 // フォントウェイト
