@@ -6,10 +6,12 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: rem(100);
   z-index: 100;
-  right: 0;
   transition: transform 0.3s ease;
+  height: rem(54);
+  @include mq(md) {
+    height: rem(100);
+  }
 }
 
 .p-header.is-hidden {
@@ -31,6 +33,7 @@
   justify-content: space-between;
   height: 100%;
   margin: 0 auto;
+  max-width: 100%;
 }
 
 .p-header__logo {
@@ -38,7 +41,10 @@
 
 .p-header__home {
   display: inline-block;
-  width: rem(142);
+  width: rem(110);
+  @include mq(md) {
+    width: rem(142);
+  }
 }
 .p-header__home img {
   width: 100%;
@@ -47,10 +53,13 @@
   object-position: center center;
 }
 .p-header__home-text {
-  font-size: rem(12);
   color: #fff;
   font-weight: 700;
   letter-spacing: 0.05em;
+  font-size: rem(10);
+  @include mq(md) {
+    font-size: rem(12);
+  }
 }
 .p-header__nav {
   display: none;
@@ -65,7 +74,6 @@
 .p-header__lists {
   display: flex;
   align-items: center;
-  /* gap: min(rem(50), calc(50 / 1440) * 100vw); */
 }
 
 .p-header__list {
@@ -115,7 +123,8 @@
 }
 
 .p-header__mega-list {
-  padding: min(rem(8), calc(8 / 1440) * 100vw) min(rem(20), calc(20 / 1440) * 100vw);
+  padding: min(rem(8), calc(8 / 1440) * 100vw)
+    min(rem(20), calc(20 / 1440) * 100vw);
 }
 
 .p-header__mega-link {
@@ -158,8 +167,8 @@
 
 .p-header__hamburger {
   display: block;
-  width: rem(30);
-  height: rem(24);
+  width: rem(22);
+  height: rem(16);
   background: transparent;
   border: none;
   cursor: pointer;

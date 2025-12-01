@@ -1,7 +1,10 @@
 @use "../global" as *;
 
 .p-mv {
-  padding-top: rem(98);
+  padding-top: rem(54);
+  @include mq(md) {
+    padding-top: rem(98);
+  }
 }
 
 .p-mv__img {
