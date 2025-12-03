@@ -24,6 +24,6 @@
 .w500 {
   width: 100%;
   @include mq(md) {
-    width: rem(500);
+    width: rem(540);
   }
 }

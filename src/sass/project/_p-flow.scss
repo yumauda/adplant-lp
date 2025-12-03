@@ -195,22 +195,38 @@
 }
 
 .p-flow__block-numberList {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
 }
 
 .p-flow__block-numberImg {
+  width: rem(150);
+  aspect-ratio: 106 / 93; /* アスペクト比を固定 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
 }
+.w120 {
+  width: rem(120);
+}
+
 .p-flow__block-numberImg img {
   width: 100%;
-  height: auto;
-  object-fit: cover;
-  object-position: center center;
+  height: 100%;
+  object-fit: contain;
+  
 }
 
 .p-flow__block-numberText {
   color: #262626;
   font-weight: 500;
   letter-spacing: 0.05em;
-  margin-top: rem(12);
+  margin-top: auto;
   text-align: center;
   font-size: rem(14);
   @include mq(md) {
@@ -315,3 +331,4 @@
   object-fit: cover;
   object-position: center center;
 }
+

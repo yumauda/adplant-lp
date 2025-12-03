@@ -51,7 +51,7 @@
   letter-spacing: 0.01em;
   @include mq(md) {
     letter-spacing: 0.03em;
-    font-size: rem(20);
+    font-size: min(rem(20), calc(20 / 1440) * 100vw);
   }
 }
 .p-guess__link span {
