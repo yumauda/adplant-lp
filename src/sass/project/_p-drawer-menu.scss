@@ -3,11 +3,14 @@
 .drawer-menu {
   position: fixed;
   top: -100%;
+  left: 0;
   width: 100%;
-  background-color: #000;
+  height: 85vh;
+  background: #000;
   z-index: 99;
   transition: top 0.3s ease;
   overflow-y: auto;
+  /* -webkit-overflow-scrolling: touch; */
 }
 
 @media (min-width: 768px) {
@@ -21,7 +24,8 @@
 }
 
 .drawer-menu__nav {
-  padding: rem(100) rem(20) rem(40);
+  padding: rem(100) rem(20) rem(60);
+  min-height: 100%;
 }
 
 .drawer-menu__lists {
@@ -45,6 +49,7 @@
   text-decoration: none;
   font-size: rem(16);
   display: inline-block;
+  font-family: $second-font-family;
 }
 
 /* .drawer-menu__link--flip {
@@ -105,4 +110,52 @@
 
 html.is-fixed {
   overflow: hidden;
+}
+
+// アコーディオン機能のスタイル
+.drawer-menu__mega-lists {
+  display: none;
+  margin-top: rem(16);
+  padding-left: rem(16);
+}
+
+.drawer-menu__mega-list {
+  padding: rem(8) 0;
+}
+
+.drawer-menu__mega-link {
+  color: #fff;
+  text-decoration: none;
+  font-size: rem(15);
+  display: block;
+  transition: color 0.3s;
+  font-family: $base-font-family;
+}
+
+.drawer-menu__mega-link:hover {
+  color: #fff;
+}
+
+// Worksリンクにアイコンを追加（オプション）
+.js-drawer-accordion {
+  position: relative;
+  padding-right: rem(20);
+
+  &::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%) rotate(0deg);
+    width: 0;
+    height: 0;
+    border-left: rem(5) solid transparent;
+    border-right: rem(5) solid transparent;
+    border-top: rem(6) solid #fff;
+    transition: transform 0.3s ease;
+  }
+
+  &.is-active::after {
+    transform: translateY(-50%) rotate(180deg);
+  }
 }

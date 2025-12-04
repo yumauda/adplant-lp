@@ -1,14 +1,14 @@
 @use "../global" as *;
 
 .p-header {
-  background-color: #000;
+  background: #000;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 100;
   transition: transform 0.3s ease;
-  height: rem(54);
+  height: rem(58);
   @include mq(md) {
     height: rem(100);
   }
@@ -36,12 +36,20 @@
   max-width: 100%;
 }
 
-.p-header__logo {
+.p-header__logo-link {
+  display: flex;
+  flex-direction: column;
+  gap: rem(4);
+  @include mq(md) {
+    gap: rem(12);
+  }
 }
 
 .p-header__home {
-  display: inline-block;
   width: rem(110);
+  display: flex;
+  align-items: center;
+  justify-content: center;
   @include mq(md) {
     width: rem(142);
   }

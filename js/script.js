@@ -51,6 +51,13 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
 
   });
 
+  //ドロワーメニューのアコーディオン
+  $(".js-drawer-accordion").click(function (e) {
+    e.preventDefault();
+    $(this).toggleClass("is-active");
+    $(this).next(".drawer-menu__mega-lists").slideToggle(300);
+  });
+
 
 
   // スムーススクロール (絶対パスのリンク先が現在のページであった場合でも作動)

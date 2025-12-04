@@ -1,6 +1,10 @@
 import fs from 'fs/promises';
 import path from 'path';
 import { glob } from 'glob';
+import { exec } from 'child_process';
+import { promisify } from 'util';
+
+const execAsync = promisify(exec);
 
 async function generateStylesScss() {
   const baseDir = 'src/sass';
@@ -32,6 +36,15 @@ async function generateStylesScss() {
   // ファイルに書き込み
   await fs.writeFile(outputFile, content.trim() + '\n', 'utf-8');
   console.log('✓ styles.scss generated successfully!');
+
+  // SASSコンパイルを実行
+  try {
+    await execAsync('sass src/sass:css --no-source-map');
+    console.log('✓ CSS compiled successfully!');
+  } catch (error) {
+    console.error('Error compiling SASS:', error.message);
+    // エラーがあってもプロセスを継続
+  }
 }
 
 generateStylesScss().catch(error => {
